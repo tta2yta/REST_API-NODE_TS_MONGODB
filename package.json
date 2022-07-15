@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/tta2yta/REST_API-NODE_TS_MONGODB#readme",
   "dependencies": {
+    "@types/mongodb": "^4.0.7",
     "bcrypt": "^5.0.1",
     "config": "^3.3.7",
     "cors": "^2.8.5",
