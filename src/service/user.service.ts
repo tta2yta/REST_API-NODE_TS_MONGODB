@@ -7,6 +7,7 @@ export default async function createUser(
   try {
     return await User.create(input);
   } catch (error) {
-    throw new Error("error");
+    throw new Error(error);
+    // throw error;
   }
 }

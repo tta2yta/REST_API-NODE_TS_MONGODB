@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 import bcrypt from "bcrypt";
-import config from "config";
+import config from "../../config/defaults";
 
 export interface UserDocument extends mongoose.Document {
   email: string;
@@ -20,14 +20,14 @@ const userSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-userSchema.pre("save", async function (next: mongoose.HookNextFunction) {
+userSchema.pre("save", async function (next) {
   let user = this as UserDocument;
 
   // only hash the password if it has been modified (or is new)
   if (!user.isModified("password")) return next();
 
   // Random additional data
-  const salt = await bcrypt.genSalt(config.get("saltWorkFactor"));
+  const salt = await bcrypt.genSalt(config.saltWorkFactor);
 
   const hash = await bcrypt.hashSync(user.password, salt);
 
