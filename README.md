@@ -1,5 +1,4 @@
 # REST_API-NODE_TS_MONGODB
-# E-commerce-MERN-Stripe
 
 [![View Code](https://img.shields.io/badge/View%20-Code-green)](https://github.com/tta2yta/E-commerce-MERN-Stripe//pulls)
 [![Github Issues](https://img.shields.io/badge/GitHub-Issues-orange)](https://github.com/tta2yta/E-commerce-MERN-Stripe/issues)
